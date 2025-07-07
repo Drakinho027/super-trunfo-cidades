@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+int main() {
+    // Variáveis da cidade 1
+    char nome1[30], estado1[30], codigo1[10];
+    int populacao1, pontosTuristicos1;
+    float area1, pib1;
+
+    // Variáveis da cidade 2
+    char nome2[30], estado2[30], codigo2[10];
+    int populacao2, pontosTuristicos2;
+    float area2, pib2;
+
+    // Cadastro da cidade 1
+    printf("Digite o nome da primeira cidade: ");
+    scanf(" %[^\n]", nome1);
+    printf("Digite o estado da cidade: ");
+    scanf(" %[^\n]", estado1);
+    printf("Digite o código da carta: ");
+    scanf(" %s", codigo1);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao1);
+    printf("Digite a área da cidade (km²): ");
+    scanf("%f", &area1);
+    printf("Digite o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib1);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos1);
+
+    // Cadastro da cidade 2
+    printf("\nDigite o nome da segunda cidade: ");
+    scanf(" %[^\n]", nome2);
+    printf("Digite o estado da cidade: ");
+    scanf(" %[^\n]", estado2);
+    printf("Digite o código da carta: ");
+    scanf(" %s", codigo2);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao2);
+    printf("Digite a área da cidade (km²): ");
+    scanf("%f", &area2);
+    printf("Digite o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib2);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos2);
+
+    // Exibir dados da cidade 1
+    printf("\n--- Cidade 1 ---\n");
+    printf("Nome: %s\nEstado: %s\nCódigo: %s\n", nome1, estado1, codigo1);
+    printf("População: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turísticos: %d\n",
+           populacao1, area1, pib1, pontosTuristicos1);
+
+    // Exibir dados da cidade 2
+    printf("\n--- Cidade 2 ---\n");
+    printf("Nome: %s\nEstado: %s\nCódigo: %s\n", nome2, estado2, codigo2);
+    printf("População: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turísticos: %d\n",
+           populacao2, area2, pib2, pontosTuristicos2);
+
+    // Comparação por PIB
+    printf("\n--- Resultado ---\n");
+
+    // Exibição dos Resultados:
+    // Após realizar as comparações, exiba os resultados para o usuário.
+    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    // Exemplo:
+    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+
+    if (pib1 > pib2) {
+        printf("A cidade vencedora é: %s (%s) - Maior PIB.\n", nome1, estado1);
+    } else if (pib2 > pib1) {
+        printf("A cidade vencedora é: %s (%s) - Maior PIB.\n", nome2, estado2);
+    } else {
+        printf("Empate! As duas cidades têm o mesmo PIB.\n");
+    }
+
+    return 0;
+}
